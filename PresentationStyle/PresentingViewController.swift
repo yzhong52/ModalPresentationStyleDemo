@@ -46,7 +46,7 @@ class PresentingViewController: UIViewController {
     
     class func createInstance() -> PresentingViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "ViewController") as! PresentingViewController
+        return storyboard.instantiateViewController(withIdentifier: "PresentingViewController") as! PresentingViewController
     }
     
     @IBOutlet var stackView: UIStackView!
@@ -73,20 +73,6 @@ class PresentingViewController: UIViewController {
             button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
             stackView.addArrangedSubview(button)
         }
-        
-        let button = UIButton(type: .system)
-        button.titleLabel?.font = UIFont.init(name: "Helvetica", size: 20)
-        button.titleLabel?.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5028518021)
-        button.setTitleColor(UIColor.white, for: .normal)
-        button.setTitle("Present Self", for: .normal)
-        button.addTarget(self, action: #selector(presentSelfTapped), for: .touchUpInside)
-        stackView.addArrangedSubview(button)
-    }
-    
-    func presentSelfTapped(_ sender: StyleButton) {
-        let vc = PresentingViewController.createInstance()
-        vc.modalPresentationStyle = .formSheet
-        self.present(vc, animated: true)
     }
     
     func buttonTapped(_ sender: StyleButton) {
