@@ -59,7 +59,6 @@ class PresentingViewController: UIViewController {
             .pageSheet,
             .formSheet,
             .currentContext,
-            .custom,
             .overFullScreen,
             .overCurrentContext,
             .popover
