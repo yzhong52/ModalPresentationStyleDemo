@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PresentingViewController.swift
 //  PresentationStyle
 //
 //  Created by Yuchen Zhong on 2017-08-12.
@@ -42,11 +42,11 @@ class StyleButton : UIButton {
     
 }
 
-class ViewController: UIViewController {
+class PresentingViewController: UIViewController {
     
-    class func createInstance() -> ViewController {
+    class func createInstance() -> PresentingViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        return storyboard.instantiateViewController(withIdentifier: "ViewController") as! PresentingViewController
     }
     
     @IBOutlet var stackView: UIStackView!
@@ -84,13 +84,13 @@ class ViewController: UIViewController {
     }
     
     func presentSelfTapped(_ sender: StyleButton) {
-        let vc = ViewController.createInstance()
+        let vc = PresentingViewController.createInstance()
         vc.modalPresentationStyle = .formSheet
         self.present(vc, animated: true)
     }
     
     func buttonTapped(_ sender: StyleButton) {
-        let vc = SecondViewController.createInstance()
+        let vc = PresentedViewController.createInstance()
         vc.modalPresentationStyle = sender.style
         if let popoverController = vc.popoverPresentationController {
             popoverController.sourceView = sender
