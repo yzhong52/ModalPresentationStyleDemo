@@ -27,6 +27,8 @@ private extension UIModalPresentationStyle {
             return "Over Current Context"
         case .popover:
             return "Popover"
+        case .blurOverFullScreen:
+            return "Blur Over Full Screen"
         case .none:
             return "N/A"
         }
@@ -39,7 +41,6 @@ class StyleButton : UIButton {
             setTitle(" ~ " + style.name + " ~ ", for: .normal)
         }
     }
-    
 }
 
 class PresentingViewController: UIViewController {
@@ -61,7 +62,7 @@ class PresentingViewController: UIViewController {
             .currentContext,
             .overFullScreen,
             .overCurrentContext,
-            .popover
+            .popover,
         ]
         for style in styles {
             let button = StyleButton(type: .system)

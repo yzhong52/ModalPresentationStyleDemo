@@ -6,15 +6,15 @@ In this demo app, there are three view controllers:
 * **Presenting View Controller**
 * **Presented View Controller**
 
-At app lauch, **Presenting View Controller** is presented on top of **Initial View Controller** with a `formSheet` style.
-
 <p align="center">
-<img src="./images/initial.png" width="40%">
+<img src="./images/initial.png" width="100%">
 </p>
 
-From **Presenting View Controller**, there are a list of buttons that will open **Presented View Controller** with different style options.
+At app lauch, **Presenting View Controller** is presented on top of **Initial View Controller** with a `formSheet` style. From **Presenting View Controller**, there are a list of buttons that will open **Presented View Controller** with different style options. The background of **Presented View Controller** has a 50% transparency so that we can see through it in some styles. 
 
-* **Current Context** v.s. **Over Current Context**
+The best way to understand the difference between them is to run the app in an iPad simulator since some of the styles are identical in iPhone. Below are some examples:
+
+* **Current Context** v.s. **Over Current Context**. 
 
 <p align="center">
 <img src="./images/current context.png" width="40%">
