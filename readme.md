@@ -18,7 +18,7 @@ The best way to understand the difference between them is to run the app in an i
 
 <p align="center">
 <img src="./images/current context.png" width="40%">
-<img src="./images/over current context.png" width="40%">
+<img src="./images/over_current_context.png" width="40%">
 </p>
 
 * **Full Screen** v.s. **Over Full Screen**
