@@ -74,14 +74,13 @@ class PresentingViewController: UIViewController {
             stackView.addArrangedSubview(button)
         }
     }
-    
+
     func buttonTapped(_ sender: StyleButton) {
         let vc = PresentedViewController.createInstance()
         vc.modalPresentationStyle = sender.style
         if let popoverController = vc.popoverPresentationController {
             popoverController.sourceView = sender
             popoverController.sourceRect = sender.bounds
-
         }
         self.present(vc, animated: true)
     }
