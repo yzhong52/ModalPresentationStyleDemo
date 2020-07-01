@@ -36,4 +36,3 @@ The best way to understand the difference between them is to run the app in an i
 <img src="./images/form sheet.png" width="29%">
 </p>
 
-PRs are welcome if you notice things that can be improved. 
